@@ -27,14 +27,14 @@
         Unlock: Unlock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LC(LA(DELETE))>;
+            bindings = <&kp LC(LA(DELETE))>;
             label = "UNLOCK";
         };
 
         unlock2: unlock2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LCTRL &kp LEFT_ALT &kp DEL>;
+            bindings = <&sk LCTRL &sk LEFT_ALT &kp DEL>;
             label = "UNLOCK2";
         };
     };
@@ -51,10 +51,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp CAPS   &kp A  &kp S  &kp D             &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp CAPS   &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LCTRL  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
