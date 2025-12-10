@@ -10,13 +10,6 @@
 
 / {
     macros {
-        Password: Password {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(E) &kp L &kp E &kp N &kp AT &kp LS(C) &kp A &kp R &kp L &kp N0 &kp S &kp N1 &kp N1 &kp N1 &kp N0>;
-            label = "PASSWORD";
-        };
-
         Lock: Lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -36,6 +29,13 @@
             #binding-cells = <0>;
             bindings = <&sk LCTRL &sk LEFT_ALT &kp DEL>;
             label = "UNLOCK2";
+        };
+
+        Password: Password {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(E) &kp L &kp E &kp N &kp AT &kp LS(C) &kp A &kp R &kp L &kp N0 &kp S &kp N1 &kp N1 &kp N1 &kp N0>;
+            label = "PASSWORD";
         };
     };
 
@@ -63,7 +63,7 @@
 &trans  &trans  &trans  &trans  &trans     &trans       &kp PLUS   &kp N7        &kp N8        &kp N9        &kp KP_MULTIPLY  &kp DELETE
 &trans  &trans  &trans  &trans  &trans     &trans       &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_DIVIDE    &trans
 &trans  &trans  &trans  &trans  &Password  &trans       &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL        &trans
-                        &trans  &none      &kp SPACE    &kp ENTER  &trans        &trans
+                        &trans  &trans     &kp SPACE    &kp ENTER  &trans        &trans
             >;
         };
 
