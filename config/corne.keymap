@@ -13,14 +13,14 @@
         Password: Password {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(E) &kp L &kp E &kp N &kp AT &kp LS(C) &kp A &kp R &kp L &kp N0 &kp S &kp N1 &kp N1 &kp N1 &kp N0>;
+            bindings = <&kp LS(E) &kp L &kp E &kp N &kp AT &kp LS(C) &kp A &kp R &kp L &kp N0 &kp S &kp N1 &kp N1 &kp N1 &kp N0>;
             label = "PASSWORD";
         };
 
         Lock: Lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(L)>;
+            bindings = <&kp LG(L) &kp KP_ENTER>;
             label = "LOCK";
         };
 
@@ -62,10 +62,10 @@
 
         layer_2 {
             bindings = <
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
-&bt BT_NXT  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans        &trans     &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans    &trans
+&trans      &trans  &trans  &trans  &trans  &Lock      &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+&bt BT_NXT  &trans  &trans  &trans  &trans  &Unlock    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans        &trans     &trans  &trans
+                            &trans  &trans  &trans     &trans  &trans    &trans
             >;
         };
     };
