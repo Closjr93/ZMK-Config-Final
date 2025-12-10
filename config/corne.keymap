@@ -30,6 +30,13 @@
             bindings = <&sk LC(LA(DELETE))>;
             label = "UNLOCK";
         };
+
+        unlock2: unlock2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LCTRL &kp LEFT_ALT &kp DEL>;
+            label = "UNLOCK2";
+        };
     };
 
     keymap {
@@ -62,10 +69,10 @@
 
         layer_2 {
             bindings = <
-&trans      &trans  &trans  &trans  &trans  &Lock      &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
-&bt BT_NXT  &trans  &trans  &trans  &trans  &Unlock    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans        &trans     &trans  &trans
-                            &trans  &trans  &trans     &trans  &trans    &trans
+&trans      &trans  &trans  &trans  &trans  &Lock       &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+&bt BT_NXT  &trans  &trans  &trans  &trans  &Unlock     &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &unlock2    &trans  &trans    &trans        &trans     &trans  &trans
+                            &trans  &trans  &trans      &trans  &trans    &trans
             >;
         };
     };
